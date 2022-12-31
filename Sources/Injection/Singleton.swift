@@ -7,4 +7,12 @@ public struct Singleton<T: AnyObject> {
         let singleton = Singletons.fetch(orInsert: wrappedValue, forKey: key)
         self.wrappedValue = singleton
     }
+    
+    public init(initialValue: T, forKey key: String? = nil) {
+        self.init(wrappedValue: initialObject, key)
+    }
+    
+//     public init<Value>(@Observed initialValue: Value, forKey key: String? = nil) where T: Observed {
+//         self.init(wrappedValue: _initialValue, key)
+//     }
 }
