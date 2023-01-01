@@ -9,7 +9,7 @@ public struct Singleton<T: AnyObject> {
     }
     
     public init(initialValue: T, forKey key: String? = nil) {
-        self.init(wrappedValue: initialObject, key)
+        self.init(wrappedValue: initialValue, key)
     }
     
 //     public init<Value>(@Observed initialValue: Value, forKey key: String? = nil) where T: Observed {
